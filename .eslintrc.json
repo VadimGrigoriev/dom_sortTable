@@ -1,0 +1,18 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+     "es6": true,
+     "browser": true,
+     "jest": true
+  },
+  "rules": {
+    "no-restricted-syntax": [
+      "error",
+      "LabeledStatement",
+      "WithStatement"
+    ],
+    "class-methods-use-this":"off",
+    "no-plusplus":"off",
+    "max-len":"off"
+  }
+}

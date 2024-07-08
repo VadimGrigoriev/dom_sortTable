@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  cursor: pointer;
+}
+
+th.sorted-asc::after {
+  content: " ↑";
+}
+
+th.sorted-desc::after {
+  content: " ↓";
+}
