@@ -14,17 +14,15 @@ export default class Table {
       (a, b) => b.dataset.imdb - a.dataset.imdb,
     ];
     this.tbody = document.querySelector('.content');
-    
     this.buildTable = this.buildTable.bind(this);
     this.sortTable = this.sortTable.bind(this);
-
     this.buildTable();
     this.start();
   }
 
   buildRow(data) {
     const tr = document.createElement('tr');
-    tr.classList.add('content-row')
+    tr.classList.add('content-row');
     tr.setAttribute('data-id', data.id);
     tr.setAttribute('data-title', data.title);
     tr.setAttribute('data-year', data.year);
@@ -61,7 +59,7 @@ export default class Table {
   sortTable() {
     const rows = [...this.tbody.querySelectorAll('.content-row')];
     rows.sort(this.sortFunc[this.sortIndex]);
-    rows.forEach(row => this.tbody.appendChild(row));
+    rows.forEach((row) => this.tbody.appendChild(row));
     this.sortIndex = (this.sortIndex + 1) % this.sortFunc.length;
     this.updateSortIndicator();
   }

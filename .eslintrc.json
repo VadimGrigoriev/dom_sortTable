@@ -14,6 +14,8 @@
     "class-methods-use-this":"off",
     "no-plusplus":"off",
     "max-len":"off",
-    "spaced-comment":"off"
+    "spaced-comment":"off",
+    "no-unused-vars":"off",
+    "no-multi-spaces":"off"
   }
 }
