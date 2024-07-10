@@ -2,7 +2,7 @@ export default class Table {
   constructor(dataList) {
     this.dataList = dataList;
     this.sortIndex = 0;
-    this.sortOption = ['asc', 'desc'];
+    this.sortOption = ['desc', 'asc'];
     this.sortFunc = [
       (a, b) => a.dataset.id - b.dataset.id,
       (a, b) => b.dataset.id - a.dataset.id,
@@ -60,8 +60,8 @@ export default class Table {
     const rows = [...this.tbody.querySelectorAll('.content-row')];
     rows.sort(this.sortFunc[this.sortIndex]);
     rows.forEach((row) => this.tbody.appendChild(row));
-    this.sortIndex = (this.sortIndex + 1) % this.sortFunc.length;
     this.updateSortIndicator();
+    this.sortIndex = (this.sortIndex + 1) % this.sortFunc.length;
   }
 
   start() {
